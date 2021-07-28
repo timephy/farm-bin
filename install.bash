@@ -30,7 +30,7 @@ echo
 
 cd ~
 echo Git clone chaingreen
-git clone https://github.com/ChainGreenOrg/chaingreen-blockchain.git -b latest --recurse-submodules
+git clone https://github.com/ChainGreenOrg/chaingreen-blockchain.git -b main --recurse-submodules
 cd chaingreen-blockchain
 echo $ sh install.sh
 sh install.sh
@@ -44,7 +44,7 @@ echo
 
 cd ~
 echo Git clone silicoin
-git clone https://github.com/silicoin-network/silicoin-blockchain.git -b latest --recurse-submodules
+git clone https://github.com/silicoin-network/silicoin-blockchain.git -b main --recurse-submodules
 cd silicoin-blockchain
 echo $ sh install.sh
 sh install.sh
