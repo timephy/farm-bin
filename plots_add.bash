@@ -11,7 +11,7 @@ for d in /media/plots/*; do
     echo "$d"
     ~/chia-blockchain/venv/bin/chia plots add -d $d
     ~/flax-blockchain/venv/bin/flax plots add -d $d
-    ~/chaingreen-blockchain/venv/bin/flax plots add -d $d
-    ~/silicoin-blockchain/venv/bin/flax plots add -d $d
+    ~/chaingreen-blockchain/venv/bin/chaingreen plots add -d $d
+    ~/silicoin-blockchain/venv/bin/silicoin plots add -d $d
   fi
 done
