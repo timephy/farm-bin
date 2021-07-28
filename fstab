@@ -3,6 +3,8 @@ LABEL=system-boot	/boot/firmware	vfat	defaults	0	1
 
 //192.168.68.210/public/chia-plots	/media/plots/nas	cifs	_netdev,username=,password=	0	0
 
+UUID=DA5AA8725AA84CD7	/media/plots/01	ntfs	defaults	0	0
+
 UUID=68868BC2868B8F6E	/media/plots/03	ntfs	defaults	0	0
 UUID=DC8A12E88A12BEC8	/media/plots/04	ntfs	defaults	0	0
 UUID=9E7273FC7273D78B	/media/plots/05	ntfs	defaults	0	0
