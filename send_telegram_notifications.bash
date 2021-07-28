@@ -2,22 +2,22 @@
 
 cd ~/chia-blockchain
 . ./activate
-CHIA="<b>Chia</b>\n$(chia farm summary)" # \n\n$(chia wallet show)
+CHIA="<b>Chia</b>\n$(chia farm summary)"
 deactivate
 
 cd ~/flax-blockchain
 . ./activate
-FLAX="<b>Flax</b>\n$(flax farm summary)" # \n\n$(flax wallet show)
+FLAX="<b>Flax</b>\n$(flax farm summary)"
 deactivate
 
 cd ~/chaingreen-blockchain
 . ./activate
-CHAINGREEN="<b>Chaingreen</b>\n$(chaingreen farm summary)" # \n\n$(chaingreen wallet show)
+CHAINGREEN="<b>Chaingreen</b>\n$(chaingreen farm summary)"
 deactivate
 
 cd ~/silicoin-blockchain
 . ./activate
-SILICOIN="<b>Silicoin</b>\n$(silicoin farm summary)" # \n\n$(silicoin wallet show)
+SILICOIN="<b>Silicoin</b>\n$(silicoin farm summary)"
 deactivate
 
 CHIA=$(python3 -c "from urllib.parse import quote; print(quote('''$CHIA'''))")
