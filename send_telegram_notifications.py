@@ -2,12 +2,10 @@
 import subprocess
 import requests
 import sys
+import config
 
 NOTIFY = 'notify' in sys.argv
 CHECK = 'check' in sys.argv
-
-TELEGRAM_TOKEN = ''
-TELEGRAM_CHAT_ID = ''
 
 coins = ['chia', 'flax', 'chaingreen', 'silicoin']
 
@@ -20,8 +18,8 @@ def get_for_coin(coin, command):
 
 def send_telegram(text, parse_mode='markdown'):
     requests.post(
-        f'https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage',
-        params={'chat_id': TELEGRAM_CHAT_ID, 'text': text, 'parse_mode': parse_mode})
+        f'https://api.telegram.org/bot{config.TELEGRAM_TOKEN}/sendMessage',
+        params={'chat_id': config.TELEGRAM_CHAT_ID, 'text': text, 'parse_mode': parse_mode})
 
 
 def main():
