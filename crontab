@@ -24,4 +24,5 @@
 
 @reboot sleep 30 ; ~/farm-bin/startup.bash >> ~/startup.log
 
-0 * * * * ~/farm-bin/send_telegram_notifications.py
+0 0,6,12,18 * * * ~/farm-bin/send_telegram_notifications.py notify
+*/15 * * * * ~/farm-bin/send_telegram_notifications.py check

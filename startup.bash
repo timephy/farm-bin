@@ -1,11 +1,11 @@
 #!/bin/bash
 
-echo
-echo ======================================
-echo Startup $(date)
-echo ======================================
-echo
+# echo
+# echo ======================================
+# echo Startup $(date)
+# echo ======================================
+# echo
 
-sudo mount -a
+# sudo mount -a
 
-~/farm-bin/start_farmer.bash
+# ~/farm-bin/start_farmer.bash
