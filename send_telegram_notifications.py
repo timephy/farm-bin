@@ -20,7 +20,7 @@ def get_for_coin(coin, command):
     return result
 
 
-def restart_for_coin(coin):
+def restart_for_coin(coin):  # TODO: running script from within python crashes... idk why
     return subprocess.check_output(f'~/farm-bin/restart_farmer.bash {coin}', shell=True, text=True)
 
 
@@ -56,7 +56,7 @@ def main():
 
     # Notify
     if 'notify' in sys.argv:
-        result = '\n'.join([f'🌱 *{coin.capitalize()}*\n{format_result(result)}' for
+        result = '\n'.join([f'🌱 *{coin.capitalize()}*\n{format_result(result)}\n' for
                             coin, result in zip(coins, results)])
         print(result)
 
