@@ -3,7 +3,7 @@ import subprocess
 import requests
 import sys
 import config
-
+import re
 
 coins = ['chia', 'flax', 'chaingreen', 'silicoin']
 
@@ -24,6 +24,23 @@ def restart_for_coin(coin):
     return subprocess.check_output(f'~/farm-bin/restart_farmer.bash {coin}', shell=True, text=True)
 
 
+def format_result(result):
+    farming_status = re.search('Farming status: (.*)\n', result).group(1)
+    total_farmed = re.search('Total (.*) farmed: (.*)\n', result).group(2)
+    size_of_plots = re.search('Total size of plots: (.*)\n', result).group(1)
+    network_space = re.search(
+        'Estimated network space: (.*)\n', result).group(1)
+    expected_time_to_win = re.search(
+        'Expected time to win: (.*)\n', result).group(1)
+    return '\n'.join([
+        f'Farming status: {farming_status}',
+        f'Total farmed: {total_farmed}',
+        f'Total size of plots: {size_of_plots}',
+        f'Estimated network space: {network_space}',
+        f'Expected time to win: {expected_time_to_win}',
+    ])
+
+
 def main():
     results = [get_for_coin(coin, 'farm summary') for coin in coins]
 
@@ -39,7 +56,7 @@ def main():
 
     # Notify
     if 'notify' in sys.argv:
-        result = '\n'.join([f'🌱 *{coin.capitalize()}*\n{result}' for
+        result = '\n'.join([f'🌱 *{coin.capitalize()}*\n{format_result(result)}' for
                             coin, result in zip(coins, results)])
         print(result)
 
