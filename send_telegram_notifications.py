@@ -49,10 +49,16 @@ def main():
         for coin, result in zip(coins, results):
             if 'Farming status: Farming' not in result and 'Farming status: Syncing' not in result:
                 send_telegram(
-                    f'❗️ *{coin.capitalize()}* not farming!\n{result}')
-                restart_result = restart_for_coin(coin)
+                    f'❗️ *{coin.capitalize()}* not farming or syncing!\n{result}')
+
+    if 'restart' in sys.argv:
+        for coin, result in zip(coins, results):
+            if 'Farming status: Farming' not in result and 'Farming status: Syncing' not in result:
                 send_telegram(
-                    f'🔄 *{coin.capitalize()}* restarted.\n{restart_result}')
+                    f'🔄 *{coin.capitalize()}* restarting.')
+                restart_result = restart_for_coin(coin)
+                # send_telegram(
+                #     f'🔄 *{coin.capitalize()}* restarting.\n{restart_result}')
 
     # Notify
     if 'notify' in sys.argv:
