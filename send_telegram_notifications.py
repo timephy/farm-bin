@@ -47,7 +47,8 @@ def main():
     # Check
     if 'check' in sys.argv:
         for coin, result in zip(coins, results):
-            if 'Farming status: Farming' not in result and 'Farming status: Syncing' not in result:
+            # if 'Farming status: Farming' not in result and 'Farming status: Syncing' not in result:
+            if 'Connection error' in result:
                 send_telegram(
                     f'❗️ *{coin.capitalize()}* not farming or syncing!\n{result}')
 
