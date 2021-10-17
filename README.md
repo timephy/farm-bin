@@ -15,3 +15,4 @@ manual:
 
 1. If on a harvester: Copy/paste (custom) content of `fstab` into `sudo vi /etc/fstab`
 2. Copy/paste (custom) content of `crontab` into `crontab -e`
+3. If on a farmer: Add keys with `coin X keys add`

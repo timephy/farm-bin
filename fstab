@@ -1,6 +1,3 @@
-LABEL=writable	/	ext4	defaults	0 0
-LABEL=system-boot	/boot/firmware	vfat	defaults	0	1
-
 //192.168.68.210/public/chia-plots	/media/plots/nas	cifs	_netdev,username=,password=	0	0
 
 UUID=DA5AA8725AA84CD7	/media/plots/01	ntfs	defaults	0	0
@@ -30,3 +27,12 @@ UUID=508C91F78C91D834	/media/plots/29	ntfs	defaults	0	0
 UUID=E88A84BC8A8488B0	/media/plots/30	ntfs	defaults	0	0
 UUID=1E488BCC488BA0DF	/media/plots/31	ntfs	defaults	0	0
 UUID=345C7BD55C7B8FFA	/media/plots/32	ntfs	defaults	0	0
+
+UUID=9E74D80E74D7E755	/media/plots/33	ntfs	defaults	0	0
+UUID=0E4CD0494CD02CE9	/media/plots/34	ntfs	defaults	0	0
+UUID=F61AC8D61AC894D1	/media/plots/35	ntfs	defaults	0	0
+UUID=F28AAE3A8AADFB6D	/media/plots/36	ntfs	defaults	0	0
+UUID=A802A09102A06652	/media/plots/37	ntfs	defaults	0	0
+UUID=745CA8AC5CA86A96	/media/plots/38	ntfs	defaults	0	0
+UUID=42C69847C6983CDB	/media/plots/39	ntfs	defaults	0	0
+UUID=B068BF8568BF493C	/media/plots/40	ntfs	defaults	0	0

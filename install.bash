@@ -10,6 +10,11 @@ fi
 
 #
 
+sudo apt-get update
+sudo apt-get upgrade -y
+
+sudo apt-get install git -y
+
 echo -e "${BLUE}$ ./install_repos.bash ${NC}"
 ./install_repos.bash
 
