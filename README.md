@@ -4,10 +4,14 @@ My helper scripts for farming chia, flax, chaingreen and silicoin on a RPi.
 
 ## How to use
 
-1. Create `~/mnemonic` with your mnemonic
-2. Set `TELEGRAM_TOKEN` and `TELEGRAM_CHAT_ID`in `.env`
-3. Run `./install.bash`
-4. Switch log level manually in `~/.COIN/mainnet/config/config.yaml`
-5. Run `./plots_add.bash`
-6. Copy/paste content of `fstab` into `vi /etc/fstab`
-7. Copy/paste content of `crontab` into `crontab -e`
+install.bash:
+
+1. Run `./install.bash`
+2. If on a harvester: Run `./create_mounts.bash`
+3. Run `./setup.bash`
+4. If on a harvester: Run `./setup_harvester.bash`
+
+manual:
+
+1. If on a harvester: Copy/paste (custom) content of `fstab` into `sudo vi /etc/fstab`
+2. Copy/paste (custom) content of `crontab` into `crontab -e`
