@@ -13,10 +13,3 @@ done
 
 coins configure --set-farmer-peer $REMOTE:8447
 coins init --fix-ssl-permissions
-
-for d in $MOUNTS_DIR/*; do
-  if [ -d "$d" ]; then
-    echo "$d"
-    coins plots add -d $d
-  fi
-done

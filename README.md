@@ -1,6 +1,6 @@
 # farm-bin
 
-My helper scripts for farming chia, flax, chaingreen and silicoin on a RPi.
+My helper scripts for farming chia, flax, chaingreen and silicoin on ubuntu.
 
 ## How to use
 
