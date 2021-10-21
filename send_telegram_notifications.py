@@ -1,17 +1,21 @@
 #!/bin/python3
+
 import subprocess
 import requests
 import sys
-import config
 import re
+import os
+
+TELEGRAM_TOKEN = os.environ['TELEGRAM_TOKEN']
+TELEGRAM_CHAT_ID = os.environ['TELEGRAM_CHAT_ID']
 
 coins = ['chia', 'flax', 'chaingreen', 'silicoin']
 
 
 def send_telegram(text, parse_mode='markdown'):
     requests.post(
-        f'https://api.telegram.org/bot{config.TELEGRAM_TOKEN}/sendMessage',
-        params={'chat_id': config.TELEGRAM_CHAT_ID, 'text': text, 'parse_mode': parse_mode})
+        f'https://api.telegram.org/bot{TELEGRAM_TOKEN}/sendMessage',
+        params={'chat_id': TELEGRAM_CHAT_ID, 'text': text, 'parse_mode': parse_mode})
 
 
 def get_for_coin(coin, command):
@@ -21,7 +25,8 @@ def get_for_coin(coin, command):
 
 
 def restart_for_coin(coin):  # TODO: running script from within python crashes... idk why
-    return subprocess.check_output(f'~/farm-bin/restart_farmer.bash {coin}', shell=True, text=True)
+    # return subprocess.check_output(f'~/farm-bin/restart_farmer.bash {coin}', shell=True, text=True)
+    return subprocess.check_output(f'restart {coin} farmer', shell=True, text=True)
 
 
 def format_result(result):

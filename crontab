@@ -22,7 +22,7 @@
 #
 # m h  dom mon dow   command
 
-@reboot sleep 30 ; ~/farm-bin/startup.bash >> ~/startup.log
+# @reboot sleep 30 ; ~/farm-bin/startup.bash >> ~/startup.log
 
 0 0,6,12,18 * * * ~/farm-bin/send_telegram_notifications.py notify
 */15 * * * * ~/farm-bin/send_telegram_notifications.py check
