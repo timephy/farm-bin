@@ -1,4 +1,4 @@
-COINS="chia flax chaingreen silicoin"
+COINS="chia flax chaingreen silicoin chives hddcoin"
 ROOT=~
 REMOTE=timephy.com
 REMOTE_USER=tim

@@ -58,6 +58,34 @@ silicoin init
 deactivate
 echo
 
+cd ~
+echo -e "${BLUE}$ git clone chives${NC}"
+git clone https://github.com/HiveProject2021/chives-blockchain.git -b main --recurse-submodules
+cd chives-blockchain
+echo -e "${BLUE}$ sh install.sh${NC}"
+sh install.sh
+. ./activate
+echo -e "${BLUE}$ chives init${NC}"
+chives init
+# echo -e "${BLUE}$ silicoin keys add -f ~/mnemonic${NC}"
+# silicoin keys add -f ~/mnemonic
+deactivate
+echo
+
+cd ~
+echo -e "${BLUE}$ git clone hddcoin${NC}"
+git clone https://github.com/HDDcoin-Network/hddcoin-blockchain.git -b main --recurse-submodules
+cd hddcoin-blockchain
+echo -e "${BLUE}$ sh install.sh${NC}"
+sh install.sh
+. ./activate
+echo -e "${BLUE}$ hddcoin init${NC}"
+hddcoin init
+# echo -e "${BLUE}$ silicoin keys add -f ~/mnemonic${NC}"
+# silicoin keys add -f ~/mnemonic
+deactivate
+echo
+
 
 
 # Switch log level to INFO in ~/.COIN/mainnet/config/config.yaml
