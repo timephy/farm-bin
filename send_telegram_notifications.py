@@ -31,14 +31,15 @@ def restart_for_coin(coin):  # TODO: running script from within python crashes..
 
 
 def format_result(result):
-    farming_status = re.search('Farming status: (.*)\n', result).group(1)
-    total_farmed = re.search('Total (.*) farmed: (.*)\n', result).group(2)
-    size_of_plots = re.search('Total size of plots: (.*)\n', result).group(1)
-    network_space = re.search(
-        'Estimated network space: (.*)\n', result).group(1)
-    expected_time_to_win = re.search(
-        'Expected time to win: (.*)\n', result).group(1)
     try:
+        farming_status = re.search('Farming status: (.*)\n', result).group(1)
+        total_farmed = re.search('Total (.*) farmed: (.*)\n', result).group(2)
+        size_of_plots = re.search(
+            'Total size of plots: (.*)\n', result).group(1)
+        network_space = re.search(
+            'Estimated network space: (.*)\n', result).group(1)
+        expected_time_to_win = re.search(
+            'Expected time to win: (.*)\n', result).group(1)
         return '\n'.join([
             # f'Farming status: {farming_status}',
             f'Total farmed: {total_farmed}',
