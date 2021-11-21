@@ -10,7 +10,7 @@ TELEGRAM_TOKEN = os.environ['TELEGRAM_TOKEN']
 TELEGRAM_CHAT_ID = os.environ['TELEGRAM_CHAT_ID']
 
 coins = ['chia', 'flax', 'chaingreen', 'silicoin',
-         'chives', 'hddcoin', 'staicoin', 'flora', 'greendoge']
+         'hddcoin', 'staicoin', 'flora', 'greendoge']
 
 
 def send_telegram(text, parse_mode='markdown'):
