@@ -9,7 +9,8 @@ import os
 TELEGRAM_TOKEN = os.environ['TELEGRAM_TOKEN']
 TELEGRAM_CHAT_ID = os.environ['TELEGRAM_CHAT_ID']
 
-coins = ['chia', 'flax', 'chaingreen', 'silicoin', 'chives', 'hddcoin']
+coins = ['chia', 'flax', 'chaingreen', 'silicoin',
+         'chives', 'hddcoin', 'staicoin', 'flora', 'greendoge']
 
 
 def send_telegram(text, parse_mode='markdown'):
@@ -38,11 +39,12 @@ def format_result(result):
     expected_time_to_win = re.search(
         'Expected time to win: (.*)\n', result).group(1)
     return '\n'.join([
-        f'Farming status: {farming_status}',
+        # f'Farming status: {farming_status}',
         f'Total farmed: {total_farmed}',
-        f'Total size of plots: {size_of_plots}',
-        f'Estimated network space: {network_space}',
-        f'Expected time to win: {expected_time_to_win}',
+        # f'Total size of plots: {size_of_plots}',
+        # f'Estimated network space: {network_space}',
+        # f'Expected time to win: {expected_time_to_win}',
+        f'Expected: {expected_time_to_win}',
     ])
 
 
