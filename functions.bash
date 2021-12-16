@@ -14,10 +14,3 @@ coins() {
         coin $coin $@
     done
 }
-
-restart() {
-    coin $1 stop all -d
-    echo -e "${BLUE}$ pkill -9 $1${NC}"
-    pkill -9 $1
-    coin $1 start $2
-}

@@ -27,7 +27,7 @@ def get_for_coin(coin, command):
 
 def restart_for_coin(coin):  # TODO: running script from within python crashes... idk why
     # return subprocess.check_output(f'~/farm-bin/restart_farmer.bash {coin}', shell=True, text=True)
-    return subprocess.check_output(f'restart {coin} farmer', shell=True, text=True)
+    return subprocess.check_output(f'~/farm-bin/restart_coin.bash {coin} farmer', shell=True, text=True)
 
 
 def format_result(result):
@@ -41,7 +41,7 @@ def format_result(result):
         expected_time_to_win = re.search(
             'Expected time to win: (.*)\n', result).group(1)
         return '\n'.join([
-            # f'Farming status: {farming_status}',
+            f'Farming status: {farming_status}',
             f'Total farmed: {total_farmed}',
             # f'Total size of plots: {size_of_plots}',
             # f'Estimated network space: {network_space}',
