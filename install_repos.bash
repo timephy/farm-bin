@@ -30,19 +30,19 @@ flax init
 deactivate
 echo
 
-cd ~
-echo -e "${BLUE}$ git clone chaingreen${NC}"
-git clone https://github.com/ChainGreenOrg/chaingreen-blockchain.git -b main --recurse-submodules
-cd chaingreen-blockchain
-echo -e "${BLUE}$ sh install.sh${NC}"
-sh install.sh
-. ./activate
-echo -e "${BLUE}$ chaingreen init${NC}"
-chaingreen init
-# echo -e "${BLUE}$ chaingreen keys add -f ~/mnemonic${NC}"
-# chaingreen keys add -f ~/mnemonic
-deactivate
-echo
+# cd ~
+# echo -e "${BLUE}$ git clone chaingreen${NC}"
+# git clone https://github.com/ChainGreenOrg/chaingreen-blockchain.git -b main --recurse-submodules
+# cd chaingreen-blockchain
+# echo -e "${BLUE}$ sh install.sh${NC}"
+# sh install.sh
+# . ./activate
+# echo -e "${BLUE}$ chaingreen init${NC}"
+# chaingreen init
+# # echo -e "${BLUE}$ chaingreen keys add -f ~/mnemonic${NC}"
+# # chaingreen keys add -f ~/mnemonic
+# deactivate
+# echo
 
 cd ~
 echo -e "${BLUE}$ git clone silicoin${NC}"
@@ -100,19 +100,19 @@ staicoin init
 deactivate
 echo
 
-cd ~
-echo -e "${BLUE}$ git clone flora${NC}"
-git clone https://github.com/Flora-Network/flora-blockchain -b main --recurse-submodules
-cd flora-blockchain
-echo -e "${BLUE}$ sh install.sh${NC}"
-sh install.sh
-. ./activate
-echo -e "${BLUE}$ flora init${NC}"
-flora init
-# echo -e "${BLUE}$ silicoin keys add -f ~/mnemonic${NC}"
-# silicoin keys add -f ~/mnemonic
-deactivate
-echo
+# cd ~
+# echo -e "${BLUE}$ git clone flora${NC}"
+# git clone https://github.com/Flora-Network/flora-blockchain -b main --recurse-submodules
+# cd flora-blockchain
+# echo -e "${BLUE}$ sh install.sh${NC}"
+# sh install.sh
+# . ./activate
+# echo -e "${BLUE}$ flora init${NC}"
+# flora init
+# # echo -e "${BLUE}$ silicoin keys add -f ~/mnemonic${NC}"
+# # silicoin keys add -f ~/mnemonic
+# deactivate
+# echo
 
 cd ~
 echo -e "${BLUE}$ git clone greendoge${NC}"
